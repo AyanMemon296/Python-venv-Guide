@@ -62,6 +62,11 @@ try {
     Write-Host "Failed to list installed packages after upgrade." -ForegroundColor Red
 }
 
+# -----------------------------------------------------------------
+# 📌 Requirements.txt handling
+# If it exists, it will find it, and if it doesn't, it will make it
+# -----------------------------------------------------------------
+
 Write-Host "Checking for requirements.txt..."
 if (Test-Path "requirements.txt") {
     Write-Host "requirements.txt found. Installing dependencies..."
